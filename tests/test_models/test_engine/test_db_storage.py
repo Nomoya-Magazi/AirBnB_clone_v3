@@ -4,9 +4,9 @@ Contains the TestDBStorageDocs and TestDBStorage classes
 """
 
 from datetime import datetime
-import odels
-from modelinspect
-import ms.engine import db_storage
+import models
+import inspect
+from models.engine import db_storage
 from models.amenity import Amenity
 from models.base_model import BaseModel
 from models.city import City
