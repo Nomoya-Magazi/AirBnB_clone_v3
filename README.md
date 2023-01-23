@@ -155,7 +155,7 @@ No known bugs at this time.
 
 ## Authors
 Amexo Francis
-Nomoya Magazi  
+Nomoya H Magazi  
 
 Second part of Airbnb: Joann Vuong
 ## License
