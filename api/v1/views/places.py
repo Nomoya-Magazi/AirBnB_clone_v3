@@ -57,8 +57,8 @@ def remove_place(city_id=None, place_id=None):
     '''Removes a place with the given id.
     '''
     if place_id:
-   place_id)
-           place = storage.get(Place,   if place:
+        place = storage.get(Place, place_id)
+        if place:
             storage.delete(place)
             storage.save()
             return jsonify({}), 200
@@ -95,8 +95,8 @@ def update_place(city_id=None, place_id=None):
     if place:
         data = request.get_json()
         if type(data) is not dict:
-            raise BadRequestt a JSON')
-     (description='No   for key, value in data.items():
+            raise BadRequest(description='Not a JSON')
+        for key, value in data.items():
             if key not in xkeys:
                 setattr(place, key, value)
         place.save()

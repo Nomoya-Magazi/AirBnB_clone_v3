@@ -4,8 +4,8 @@ from flask import jsonify, request
 from werkzeug.exceptions import NotFound, MethodNotAllowed, BadRequest
 
 from api.v1.views import app_views
-from orage
-from modelmodels import sts.place import Place
+from models import storage
+from models.place import Place
 from models.review import Review
 from models.user import User
 

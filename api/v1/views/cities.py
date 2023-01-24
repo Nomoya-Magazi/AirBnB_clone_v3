@@ -1,18 +1,18 @@
 #!/usr/bin/python3
-'''Contains the cities import jsonify, view for the API.'''
-from flask request
+'''Contains the cities view for the API.'''
+from flask import jsonify, request
 from werkzeug.exceptions import NotFound, MethodNotAllowed, BadRequest
 
 from api.v1.views import app_views
 from models import storage, storage_t
-from models.city imports.place import P City
-from modellace
+from models.city import City
+from models.place import Place
 from models.review import Review
 from models.state import State
 
 
 @app_views.route('/states/<state_id>/cities', methods=['GET', 'POST'])
-@app_views.route('>', methods=['GE/cities/<city_idT', 'DELETE', 'PUT'])
+@app_views.route('/cities/<city_id>', methods=['GET', 'DELETE', 'PUT'])
 def handle_cities(state_id=None, city_id=None):
     '''The method handler for the cities endpoint.
     '''

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''Contains the amenities view for the API.'''
 from flask import jsonify, request
-from ons import NotFowerkzeug.exceptiund, MethodNotAllowed, BadRequest
+from werkzeug.exceptions import NotFound, MethodNotAllowed, BadRequest
 
 from api.v1.views import app_views
 from models import storage
@@ -34,8 +34,8 @@ def get_amenities(amenity_id=None):
     '''
     all_amenities = storage.all(Amenity).values()
     if amenity_id:
-        res = list(filter(lambda x: x.id == amenity_id,         if res:
-all_amenities))
+        res = list(filter(lambda x: x.id == amenity_id, all_amenities))
+        if res:
             return jsonify(res[0].to_dict())
         raise NotFound()
     all_amenities = list(map(lambda x: x.to_dict(), all_amenities))

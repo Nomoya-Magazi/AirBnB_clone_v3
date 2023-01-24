@@ -6,10 +6,10 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 
 from models import storage
-from apt app_views
+from api.v1.views import app_views
 
 
-api.v1.views imporp = Flask(__name__)
+app = Flask(__name__)
 '''The Flask web application instance.'''
 app_host = os.getenv('HBNB_API_HOST', '0.0.0.0')
 app_port = int(os.getenv('HBNB_API_PORT', '5000'))

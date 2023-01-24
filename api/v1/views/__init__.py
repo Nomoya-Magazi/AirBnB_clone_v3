@@ -1,5 +1,5 @@
-#!/usr/binnt for the API.'/python3
-'''Contains the bluepri''
+#!/usr/bin/python3
+'''Contains the blueprint for the API.'''
 from flask import Blueprint
 
 
